@@ -1,0 +1,41 @@
+.root {
+  
+    -fx-background-color: linear-gradient(#AACAF9, #FDD0F9);
+}
+.boxes{
+	background-color: #004882;
+}
+.label {
+	-fx-font-size: 13px;
+	-fx-text-fill: #06127F;
+	-fx-font-weight: bold;
+	//-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 )
+}
+
+.buttons {
+	-fx-font-size: 13px;
+}
+#quit-button{
+	-fx-background-color: linear-gradient(#AACAF9, #2A78EE);
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+#render-button{
+	-fx-background-color: linear-gradient(#AACAF9, #2A78EE);
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+#check-box{
+	-fx-font-size: 13px;
+	-fx-text-fill: #06127F;
+}
+#green-label{
+	-fx-font-size: 13px;
+	-fx-text-fill: #206416;
+}
+#blue-label{
+	-fx-font-size: 13px;
+	-fx-text-fill: #161E64;
+}
+#red-label{
+	-fx-font-size: 13px;
+	-fx-text-fill: #E21724;
+}

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs120.student.PrimaryController">
+   <top>
+      <HBox prefHeight="68.0" prefWidth="600.0" spacing="5.0" styleClass="root" stylesheets="@Login.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="font-family" prefHeight="19.0" prefWidth="25.0" styleClass="labels" stylesheets="@Login.css" text="Font">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+            </Label>
+            <ComboBox id="box-font-families" fx:id="boxFontFamily" prefWidth="150.0" styleClass="boxes" stylesheets="@Login.css" />
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="labels" stylesheets="@Login.css" text="Weight">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+            </Label>
+            <ComboBox id="box-font-weights" fx:id="boxFontWeight" prefWidth="150.0" styleClass="boxes" stylesheets="@Login.css" />
+            <Label stylesheets="@Login.css" text="Size">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+            </Label>
+            <ComboBox id="box-font-sizes" fx:id="boxFontSize" prefWidth="150.0" styleClass="boxes" stylesheets="@Login.css" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="18.0" right="10.0" top="20.0" />
+         </padding>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="render-button" fx:id="btnRender" mnemonicParsing="false" onAction="#renderButtonAction" stylesheets="@Login.css" text="Render" />
+            <Button id="quit-button" mnemonicParsing="false" onAction="#quitButtonAction" stylesheets="@Login.css" text="Quit" />
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <right>
+      <StackPane fx:id="stackPane" prefHeight="268.0" prefWidth="348.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="265.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" styleClass="rectangle" width="318.0" />
+         </children></StackPane>
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="196.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="252.0" spacing="10.0">
+               <children>
+                  <Label text="Text:" />
+                  <TextField id="text-field" fx:id="textField" styleClass="textfield" />
+               </children>
+            </HBox>
+            <HBox prefHeight="88.0" prefWidth="252.0" spacing="10.0">
+               <children>
+                  <CheckBox id="check-box" fx:id="checkBox" mnemonicParsing="false" stylesheets="@Login.css" text="Shape" />
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <RadioButton id="rect-button" fx:id="rectRadioBtn" mnemonicParsing="false" styleClass="buttons" stylesheets="@Login.css" text="Rectangle" />
+                        <RadioButton fx:id="ellipseRadioBtn" mnemonicParsing="false" styleClass="buttons" stylesheets="@Login.css" text="Ellipse" />
+                        <RadioButton fx:id="starRadioBtn" mnemonicParsing="false" styleClass="buttons" stylesheets="@Login.css" text="Star" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="148.0" prefWidth="252.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="82.0" text="Color:">
+                     <padding>
+                        <Insets left="20.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="145.0" prefWidth="132.0" spacing="10.0">
+                     <children>
+                        <Slider fx:id="redSlider" max="255.0" showTickLabels="true" showTickMarks="true" />
+                        <Slider fx:id="greenSlider" max="255.0" showTickLabels="true" showTickMarks="true" />
+                        <Slider id="blue-slider" fx:id="blueSlider" max="255.0" showTickLabels="true" showTickMarks="true" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="2.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="122.0" prefWidth="73.0" spacing="30.0">
+                     <children>
+                        <Label id="red-label" contentDisplay="CENTER" stylesheets="@Login.css" text="Red">
+                           <VBox.margin>
+                              <Insets right="5.0" />
+                           </VBox.margin></Label>
+                        <Label id="green-label" stylesheets="@Login.css" text="Green" />
+                        <Label id="blue-label" text="Blue">
+                           <VBox.margin>
+                              <Insets right="5.0" />
+                           </VBox.margin></Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" right="16.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
